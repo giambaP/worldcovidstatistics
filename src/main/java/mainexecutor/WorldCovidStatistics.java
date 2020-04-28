@@ -10,7 +10,7 @@ public class WorldCovidStatistics extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         String command = update.getMessage().getText();
         SendMessage message = new SendMessage();
-        message.setText("ciao");
+        message.setText("come stai");
         if (command.equals("/myname")) {
             System.out.println(update.getMessage().getFrom().getFirstName());
             message.setText(update.getMessage().getFrom().getFirstName());
