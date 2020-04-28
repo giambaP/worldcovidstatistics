@@ -10,20 +10,20 @@ public class WorldCovidStatistics extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         String command = update.getMessage().getText();
         SendMessage message = new SendMessage();
-        message.setText("come stai");
-        if (command.equals("/myname")) {
-            System.out.println(update.getMessage().getFrom().getFirstName());
-            message.setText(update.getMessage().getFrom().getFirstName());
-        }
-        if (command.equals("/mylastname")) {
-            System.out.println(update.getMessage().getFrom().getLastName());
-            message.setText(update.getMessage().getFrom().getLastName());
-        }
-        if (command.equals("/myfullname")) {
-            System.out.println(update.getMessage().getFrom().getFirstName() + " " + update.getMessage().getFrom().getLastName());
-            message.setText(update.getMessage().getFrom().getFirstName() + " " + update.getMessage().getFrom().getLastName());
-        }
         message.setChatId(update.getMessage().getChatId());
+        message.setText("ho cambiato messaggio");
+//        if (command.equals("/myname")) {
+//            System.out.println(update.getMessage().getFrom().getFirstName());
+//            message.setText(update.getMessage().getFrom().getFirstName());
+//        }
+//        if (command.equals("/mylastname")) {
+//            System.out.println(update.getMessage().getFrom().getLastName());
+//            message.setText(update.getMessage().getFrom().getLastName());
+//        }
+//        if (command.equals("/myfullname")) {
+//            System.out.println(update.getMessage().getFrom().getFirstName() + " " + update.getMessage().getFrom().getLastName());
+//            message.setText(update.getMessage().getFrom().getFirstName() + " " + update.getMessage().getFrom().getLastName());
+//        }
         try {
             execute(message);
         } catch (TelegramApiException e) {
